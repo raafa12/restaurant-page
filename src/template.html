@@ -3,25 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Page</title>
-    
-    <!-- 
-        Using a descriptive title that can be dynamically updated later 
-        The viewport meta tag ensures proper rendering on mobile devices
-    -->
+    <title>Culinary Oasis Restaurant</title>
 </head>
 <body>
-    <!-- 
-        Header contains the main navigation for the site
-        Using buttons instead of links allows for more dynamic JavaScript-driven page updates 
-        This approach supports a Single Page Application (SPA) style navigation
-    -->
     <header>
         <nav>
-            <!-- 
-                Each button represents a different "page" or section of the restaurant website
-                We'll use data attributes to help with JavaScript tab switching 
-            -->
             <button data-tab="home" class="nav-button active">Home</button>
             <button data-tab="menu" class="nav-button">Menu</button>
             <button data-tab="about" class="nav-button">About</button>
@@ -29,15 +15,41 @@
         </nav>
     </header>
 
-    <!-- 
-        Content div will be the target for dynamically loaded page content
-        JavaScript will manipulate this div to swap out different "pages" 
-    -->
     <div id="content">
-        <!-- 
-            This div will be populated dynamically by JavaScript 
-            Each "page" will be generated and inserted here 
-        -->
+        <div class="home-page">
+            <h1>Welcome to Culinary Oasis</h1>
+            
+            <!-- Use a local image from src/images directory -->
+            <img 
+                src="./images/restaurant-interior.jpg" 
+                alt="Culinary Oasis Restaurant Interior" 
+                style="max-width: 100%; height: auto; margin: 20px 0;"
+            >
+            
+            <div class="restaurant-description">
+                <p>
+                    Nestled in the heart of the city, Culinary Oasis is more than just a restaurant 
+                    – it's a journey through flavors, textures, and culinary artistry. Our passionate 
+                    chefs craft each dish with locally sourced ingredients, transforming simple 
+                    components into extraordinary experiences.
+                </p>
+                
+                <p>
+                    From the moment you step through our doors, you'll be transported to a world 
+                    where every meal tells a story. Whether you're seeking an intimate dinner, 
+                    a celebratory feast, or a casual lunch with friends, Culinary Oasis promises 
+                    an unforgettable dining adventure.
+                </p>
+                
+                <h2>Our Promise</h2>
+                <ul>
+                    <li>Fresh, locally sourced ingredients</li>
+                    <li>Innovative culinary techniques</li>
+                    <li>Warm, inviting atmosphere</li>
+                    <li>Exceptional service</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>

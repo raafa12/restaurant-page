@@ -22,23 +22,27 @@ module.exports = {
         }
       },
       {
-        test: /\.html$/,  // Add this rule to handle HTML files
+        test: /\.html$/,
         use: ['html-loader']
       },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'template.html'),  // Use absolute path
+      template: path.resolve(__dirname, 'src', 'template.html'),
       filename: 'index.html',
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'),  // Use absolute path
+    static: path.resolve(__dirname, 'dist'),
     hot: true,
     port: 8080,
   },
