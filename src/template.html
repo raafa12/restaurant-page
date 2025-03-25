@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    
+    <!-- 
+        Using a descriptive title that can be dynamically updated later 
+        The viewport meta tag ensures proper rendering on mobile devices
+    -->
+</head>
+<body>
+    <!-- 
+        Header contains the main navigation for the site
+        Using buttons instead of links allows for more dynamic JavaScript-driven page updates 
+        This approach supports a Single Page Application (SPA) style navigation
+    -->
+    <header>
+        <nav>
+            <!-- 
+                Each button represents a different "page" or section of the restaurant website
+                We'll use data attributes to help with JavaScript tab switching 
+            -->
+            <button data-tab="home" class="nav-button active">Home</button>
+            <button data-tab="menu" class="nav-button">Menu</button>
+            <button data-tab="about" class="nav-button">About</button>
+            <button data-tab="contact" class="nav-button">Contact</button>
+        </nav>
+    </header>
+
+    <!-- 
+        Content div will be the target for dynamically loaded page content
+        JavaScript will manipulate this div to swap out different "pages" 
+    -->
+    <div id="content">
+        <!-- 
+            This div will be populated dynamically by JavaScript 
+            Each "page" will be generated and inserted here 
+        -->
+    </div>
+</body>
+</html>
