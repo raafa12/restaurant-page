@@ -1,11 +1,13 @@
 import restaurantImage from './images/restaurant-interior.jpg';
 
-console.log('Restaurant Image Path:', restaurantImage);  // Diagnostic log
-
 export function createHomePage() {
-    // Rest of the function remains the same...
+    // Create home container
+    const homeContainer = document.createElement('div');
+    homeContainer.classList.add('home-container');
+
+    // Create restaurant image
     const image = document.createElement('img');
-    image.src = restaurantImage;  // Use the imported image
+    image.src = restaurantImage;  // Directly use the imported image
     image.alt = 'Culinary Oasis Restaurant Interior';
     image.style.maxWidth = '100%';
     image.style.height = 'auto';
@@ -15,6 +17,9 @@ export function createHomePage() {
     image.onerror = () => {
         console.error('Failed to load image:', restaurantImage);
     };
+
+    // Add image to home container
+    homeContainer.appendChild(image);
 
     // Create the restaurant description container
     const descriptionContainer = document.createElement('div');
